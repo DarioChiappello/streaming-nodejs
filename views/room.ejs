@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Document</title>
+  <style>
+    #video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 300px);
+      grid-auto-rows: 300px;
+      margin: 6px;
+      padding: 10px;
+     
+    }
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-right: 12px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body class="bg-primary">
+    <div class="container-fluid bg-dark text-white">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <h1 class="text-center" style="padding-top: 25px; padding-left: 20px;">Stream App</h1>
+            </li>
+            <li class="nav-item">
+                <img src="/img/logo.png" alt="logo" style="height: 120px; width: auto;">
+            </li>
+        </ul>
+
+    </div>
+    <br>
+  <div id="video-grid"></div>
+
+  <div class="clearfix"></div>
+
+
+
+</body>
+</html>
